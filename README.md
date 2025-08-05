@@ -20,8 +20,8 @@ Install font, follow this instruction
 ## Clone this repo
 
 ```bash
-git clone https://github.com/risyady/dotfiles-wm.git
-cd dotfiles-wm
+git clone https://github.com/risyady/dotfiles-i3wm.git
+cd dotfiles-i3wm
 ```
 
 ## copy the folder or just make symlink
