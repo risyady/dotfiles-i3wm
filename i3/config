@@ -193,14 +193,10 @@ bindsym $mod+r mode "resize"
 bar {
         status_command i3status
 	colors {
-		# Latar belakang utama bar
 		background #282a36
-		# Warna teks untuk status (dari i3status-rust/i3status)
 		statusline #f8f8f2
-	    	# Warna garis pemisah antar blok
 		separator  #6272a4
 
-	    	# Warna untuk tombol workspace
     		# Format:          border    background text
 		focused_workspace  #bd93f9  #44475a    #f8f8f2
 		active_workspace   #44475a  #44475a    #f8f8f2
@@ -210,12 +206,12 @@ bar {
 	}
 }
 
-# gaps
+# Gaps rule
 gaps inner 10
 gaps outer 4
 smart_gaps on
 
-# border
+# Border window
 default_border pixel 2
 default_floating_border pixel 2
 
@@ -232,7 +228,7 @@ for_window [class="Pavucontrol"] floating enable
 for_window [class="Thunar"] floating enable, resize set 1000 600
 # for_window [class="<class_name>"] floating enable, resize set <width_in_pixel> <height_in_pixel>
 
-# for shortcut
+# Application's shortcut key
 bindsym $mod+x exec i3lock-fancy
 bindsym $mod+Shift+f exec --no-startup-id thunar
 bindsym $mod+Shift+s exec --no-startup-id xfce4-screenshooter
