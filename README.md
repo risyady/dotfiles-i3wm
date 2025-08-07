@@ -1,9 +1,9 @@
 ## My Development Environment as Code
 
 <p align="center">
-<a href="#"><img src="https://img.shields.io/badge/OS-Linux-informational?style=flat-square&logo=linux&logoColor=white" /></a>
-<a href="#"><img src="https://img.shields.io/badge/WM-i3-success?style=flat-square&logo=i3&logoColor=white" /></a>
-<a href="#"><img src="https://img.shields.io/badge/License-MIT-blue?style=flat-square" /></a>
+  <img src="https://img.shields.io/badge/OS-Linux-informational?style=for-the-badge&logo=linux&logoColor=white" />
+  <img src="https://img.shields.io/badge/WM-i3-success?style=for-the-badge&logo=i3&logoColor=white" />
+  <img src="https://img.shields.io/badge/License-MIT-blue?style=for-the-badge" />
 </p>
 
 <p align="center">
@@ -134,9 +134,9 @@ This configuration uses the **Windows (Super)** key as the `$Mod` key.
 ## 🗺️ Roadmap
 
 This repository is under continuous development. Future plans include:
-* [ ] **Neofetch:** Integration of a custom system info script.
-* [ ] **Greenclip:** Addition of a clipboard manager.
-* [ ] **CI/CD:** Adding a GitHub Action to lint shell scripts (`shellcheck`).
+* [ ] **Neofetch** – Integration of a custom system info script.
+* [ ] **Greenclip** – Addition of a clipboard manager.
+* [ ] **CI/CD** – Adding a GitHub Action to lint shell scripts (`shellcheck`).
 
 ## 🤝 Contributing
 
