@@ -16,7 +16,7 @@ This repository contains all the configuration files (*dotfiles*) and automation
 
 | Desktop View (Clean) | Rofi Launcher |
 | :----------------------: | :-------------: |
-| <img src="i3-preview.png" width="400"> | <img src="rofi-preview.png" width="400"> |
+| <img src="screenshots/i3-preview.png" width="400"> | <img src="screenshots/rofi-preview.png" width="400"> |
 
 ## Philosophy
 
@@ -34,6 +34,7 @@ This repository contains all the configuration files (*dotfiles*) and automation
 | **App Launcher** | `Rofi` - A versatile application launcher and switcher. |
 | **File Manager** | `Thunar` - A lightweight and functional file manager. |
 | **System Lock** | `i3lock-fancy` - A script to lock the screen with a blur effect. |
+| **Compositor** | `picom` - A lightweight compositor for X11 with animation support. |
 | **Fonts** | `Nerd Fonts` - To display icons and glyphs in the terminal. |
 
 ---
@@ -48,7 +49,7 @@ Ensure `git` is installed. The following command will install other required dep
 
 ```bash
 sudo apt update && sudo apt upgrade
-sudo apt install git i3 alacritty rofi thunar nitrogen i3lock-fancy xfce4-screenshooter nm-applet
+sudo apt install git i3 alacritty rofi thunar nitrogen i3lock-fancy xfce4-screenshooter nm-applet picom
 ```
 
 You **must** also install a `JetBrainsMono Nerd Font`. Follow the instructions from the official repository:

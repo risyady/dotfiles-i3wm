@@ -44,7 +44,10 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 
 # wallpaper
 # exec_always --no-startup-id feh --bg-scale /home/risyad/.wallpaper.jpg
-exec_always --no-startup-id  nitrogen --restore
+exec_always --no-startup-id nitrogen --restore
+
+# compositor
+exec_always --no-startup-id picom -b
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod

@@ -16,6 +16,7 @@ declare -A configs
 configs=(
     ["i3"]="$CONFIG_DIR/i3"
     ["rofi"]="$CONFIG_DIR/rofi"
+    ["picom"]="$CONFIG_DIR/picom"
     # ["alacritty"]="$CONFIG_DIR/alacritty"
     # Tambahkan konfigurasi baru di sini
 )
