@@ -225,13 +225,4 @@ client.focused_inactive	#44475a #282a36 #f8f8f2 #44475a   #44475a
 client.urgent		#ff5555 #282a36 #f8f8f2 #ff5555   #ff5555
 client.background	#282a36
 
-# for_window configuration
-for_window [class="zoom"] floating enable
-for_window [class="Pavucontrol"] floating enable
-for_window [class="Thunar"] floating enable, resize set 1000 600
-# for_window [class="<class_name>"] floating enable, resize set <width_in_pixel> <height_in_pixel>
-
-# Application's shortcut key
-bindsym $mod+x exec i3lock-fancy
-bindsym $mod+Shift+f exec --no-startup-id thunar
-bindsym $mod+Shift+s exec --no-startup-id xfce4-screenshooter
+include ~/.config/i3/personal_configs

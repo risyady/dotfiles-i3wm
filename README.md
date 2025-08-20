@@ -32,7 +32,6 @@ This repository contains all the configuration files (*dotfiles*) and automation
 | **Window Manager** | `i3` - An efficient tiling window manager.   |
 | **Terminal** | `Alacritty` - A GPU-accelerated terminal emulator. |
 | **App Launcher** | `Rofi` - A versatile application launcher and switcher. |
-| **File Manager** | `Thunar` - A lightweight and functional file manager. |
 | **System Lock** | `i3lock-fancy` - A script to lock the screen with a blur effect. |
 | **Compositor** | `picom` - A lightweight compositor for X11 with animation support. |
 | **Fonts** | `Nerd Fonts` - To display icons and glyphs in the terminal. |
@@ -49,7 +48,7 @@ Ensure `git` is installed. The following command will install other required dep
 
 ```bash
 sudo apt update && sudo apt upgrade
-sudo apt install git i3 alacritty rofi thunar nitrogen i3lock-fancy xfce4-screenshooter nm-applet picom
+sudo apt install git i3 alacritty rofi nitrogen i3lock-fancy picom
 ```
 
 You **must** also install a `JetBrainsMono Nerd Font`. Follow the instructions from the official repository:
@@ -117,8 +116,6 @@ This configuration uses the **Windows (Super)** key as the `$Mod` key.
 | :---------------------- | :-------------------------------------- |
 | `$Mod + Return`         | Open Terminal (Alacritty)               |
 | `$Mod + d`              | Open Rofi (Application Launcher)        |
-| `$Mod + Shift + f`      | Open Thunar (File Manager)              |
-| `$Mod + Shift + s`      | Open Screenshooter                      |
 | `$Mod + x`              | Lock i3 (i3lock-fancy)                  |
 | `$Mod + Arrow (←↑↓→)`   | Change window focus                     |
 | `$Mod + Shift + Arrow`  | Move focused window                     |

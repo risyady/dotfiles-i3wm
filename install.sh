@@ -1,24 +1,23 @@
 #!/bin/bash
 
-# Warna untuk output
+# Color for output text
 INFO='\033[0;34m'
 SUCCESS='\033[0;32m'
 WARN='\033[0;33m'
 NC='\033[0m' # No Color
 
-# Direktori sumber dan file penanda
+# Directory of sources and marker files
 SOURCE_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
 CONFIG_DIR="$HOME/.config"
 LOCK_FILE="$HOME/.risyady_dotfiles_installed"
 
-# Daftar konfigurasi: [folder_sumber]="$HOME/.config/[folder_tujuan]"
+# Configuration list: [source_folder]=“$HOME/.config/[destination_folder]”
 declare -A configs
 configs=(
     ["i3"]="$CONFIG_DIR/i3"
     ["rofi"]="$CONFIG_DIR/rofi"
     ["picom"]="$CONFIG_DIR/picom"
     # ["alacritty"]="$CONFIG_DIR/alacritty"
-    # Tambahkan konfigurasi baru di sini
 )
 
 # --- Controller Parser ---
@@ -39,7 +38,7 @@ EOF
 }
 
 install_or_reinstall() {
-    # Loop melalui setiap aplikasi
+    # Loop through each application
     for app in "${!configs[@]}"; do
         source_path="$SOURCE_DIR/$app"
         target_path="${configs[$app]}"
@@ -49,17 +48,27 @@ install_or_reinstall() {
             echo -e "${WARN}Source dir $source_path not found. Skipping.${NC}"; continue;
         fi
 
-        # Backup jika ada konfigurasi asli (bukan symlink)
+        # Backup if there is an original configuration (not a symlink)
         if [ -e "$target_path" ] && [ ! -L "$target_path" ]; then
             echo -e "${WARN}Found existing config at $target_path. Backing up...${NC}"
             rm -rf "$target_path.bak"
             mv "$target_path" "$target_path.bak"
         fi
         
-        # Buat symlink, timpa jika sudah ada (-f)
+        # Create a symlink, overwrite if it already exists (-f)
         ln -snf "$source_path" "$target_path"
         echo -e "${SUCCESS}Successfully linked $app.${NC}"
     done
+
+    # Check for personal config template and create one if it doesn't exist
+    PERSONAL_CONFIG_PATH="$CONFIG_DIR/i3/personal_configs"
+    PERSONAL_CONFIG_EXAMPLE_PATH="$SOURCE_DIR/i3/personal_configs.example"
+
+    if [ ! -f "$PERSONAL_CONFIG_PATH" ] && [ -f "$PERSONAL_CONFIG_EXAMPLE_PATH" ]; then
+        echo -e "${INFO}Personal config not found. Creating from template...${NC}"
+        cp "$PERSONAL_CONFIG_EXAMPLE_PATH" "$PERSONAL_CONFIG_PATH"
+        echo -e "${SUCCESS}Created $PERSONAL_CONFIG_PATH. You can add your personal keybindings here.${NC}"
+    fi
 }
 
 uninstall() {
@@ -82,7 +91,7 @@ uninstall() {
     echo -e "\n${SUCCESS}Uninstallation complete!${NC}"
 }
 
-# --- LOGIKA UTAMA ---
+# --- MAIN LOGIC ---
 
 case "$1" in
     -r|-f|--reinstall|--force)

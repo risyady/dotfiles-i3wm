@@ -1,0 +1,21 @@
+# Personal Configurations
+# This file is for your personal shortcuts and window rules.
+# It is ignored by Git, so your private changes won't be committed.
+# Feel free to add your custom settings here.
+
+# Application's shortcut key
+# Syntax: bindsym $mod+<key> exec --no-startup-id <command>
+
+bindsym $mod+x exec i3lock-fancy
+bindsym $mod+Shift+f exec --no-startup-id thunar
+bindsym $mod+Shift+s exec --no-startup-id xfce4-screenshooter
+
+# for_window configuration
+# Syntax: for_window [class="<class_name>"] floating enable, resize set <width> <height>
+
+for_window [class="zoom"] floating enable
+for_window [class="Pavucontrol"] floating enable
+for_window [class="Thunar"] floating enable, resize set 1000 600
+for_window [class="TelegramDesktop"] floating enable, resize set 380 650
+
+# Reload your session to apply your personal config (e.g., logout/login or Mod+Shift+r for i3).
