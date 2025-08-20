@@ -108,6 +108,17 @@ After the installation is complete, **Logout** from your current session. On the
 
 To reload the i3 configuration without logging out, use the shortcut: `$Mod + Shift + r`
 
+---
+### **Personalizing Your Configuration**
+
+This setup uses a modular approach for easy customization. Your personal shortcuts and window rules should be placed in:
+
+```bash
+~/.config/i3/personal_configs
+```
+
+This file is automatically created from a template during installation and is **ignored by Git**. This means your private customizations will not be overwritten when you update the repository with `git pull`.
+
 ## ⌨️ Key Keybindings
 
 This configuration uses the **Windows (Super)** key as the `$Mod` key.
@@ -127,7 +138,7 @@ This configuration uses the **Windows (Super)** key as the `$Mod` key.
 | `$Mod + Shift + c`      | Reload system configuration             |
 | `$Mod + Shift + e`      | Exit i3 (Menu for Logout)               |
 
-*For a complete list of all keybindings, please refer to the `i3/config` file.*
+*For a complete list of default keybindings, please see the main `i3/config` file. To add your own shortcuts, edit the `~/.config/i3/personal_configs` file.*
 
 ## 🗺️ Roadmap
 
